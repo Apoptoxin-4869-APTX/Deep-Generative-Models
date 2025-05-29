@@ -1,5 +1,6 @@
 # main author Jakub Tomczak
 # modified by Ertunc Erdil
+# further modified by Apoptoxin-4869
 
 import os
 import numpy as np
@@ -209,7 +210,7 @@ def evaluation(data_loader, model_path=None, model=None, epoch=None):
     """
     if model is None:
         # load best performing model
-        model = torch.load(f"{model_path}/arm.model")
+        model = torch.load(f"{model_path}/arm.model", weights_only=False)
 
     model.eval()
     loss = 0.
@@ -263,7 +264,7 @@ def samples_generated(path, extra_name=''):
     """
     # x = next(iter(data_loader)).detach().numpy()
 
-    model = torch.load(f"{path}/arm.model")
+    model = torch.load(f"{path}/arm.model", weights_only=False)
     model.eval()
 
     num_x = 4
@@ -363,7 +364,7 @@ def main():
     input_dims = 64 # Input dimension of the data
 
     lr = 1e-3 # Learning rate
-    num_epochs = 1000 # Max. number of epochs for training
+    num_epochs = 100 # Max. number of epochs for training
     max_patience = 20 # If training doesn't improve for longer than max_patience epochs, it is stopped
     
     # Number of output channels in the intermediate convolutional layers.
