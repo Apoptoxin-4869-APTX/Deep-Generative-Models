@@ -1,5 +1,8 @@
+# ignores the virtual environemnt itself
 dgm/
 
-# Ignoring generated results from topic 2
+# ignores any 
+results*/
+
 /02 AutoRegressive Models/results_1d_causal_conv/
 /02 AutoRegressive Models/results_2d_causal_conv/
