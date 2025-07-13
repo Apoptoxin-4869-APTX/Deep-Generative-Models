@@ -1,4 +1,4 @@
-.env/
+dgm/
 
 # Ignoring generated results from topic 2
 /02 AutoRegressive Models/results_1d_causal_conv/
