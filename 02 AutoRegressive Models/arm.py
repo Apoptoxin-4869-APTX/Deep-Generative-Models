@@ -1,7 +1,7 @@
 # inspired by Jakub M. Tomczak
 # written by Apoptoxin-4869
 
-# importing necessary libraries
+# import libraries
 
 import os
 import numpy as np
@@ -253,7 +253,7 @@ def main():
     val_loader = DataLoader(val_data, batch_size=64, shuffle=False)
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
-        # create result directory 
+    # create result directory 
     name = 'arm'
     if not (os.path.exists('results/')):
         os.mkdir('results/')
@@ -316,8 +316,6 @@ def main():
     samples_real(result_dir + name, test_loader)
 
     plot_curve(result_dir + name, nll_val)
-
-
 
 if __name__ == '__main__':
 
