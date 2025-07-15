@@ -27,6 +27,7 @@ packaging==25.0
 pillow==11.3.0
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
+pytorch-model-summary==0.1.2
 scikit-learn==1.7.0
 scipy==1.16.0
 setuptools==70.2.0
@@ -36,5 +37,6 @@ threadpoolctl==3.6.0
 torch==2.5.1+cu121
 torchaudio==2.5.1+cu121
 torchvision==0.20.1+cu121
+tqdm==4.67.1
 triton==3.1.0
 typing_extensions==4.12.2
